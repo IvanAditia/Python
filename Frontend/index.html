@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+  <title>Gudang</title>
+</head>
+<body>
+  <header>
+    <h1 class="navbar bg-red-400 shadow-sm text-[30px] text-blue-900 font-semibold">Gudangku</h1>
+    <nav class="p-[8px] bg-red-200 shadow-sm bg-">
+      <button tabindex="0" role="button" class="btn btn-primary size-17 dropdown" >Arsip
+        <ul tabindex="0" class="dropdown-content menu bg-indigo-700 border text-black rounded-box z-1 w-52 p-2 shadow-sm top-18 left-0.5">
+          <li><a class="shadow-xl text-white border" onclick="input_konsumen.showModal1()">Input Konsumen</a></li>
+          <li><a class="shadow-xl text-white border mt-2">Input Akun</a></li>
+          <li><a class="shadow-xl text-white border mt-2">Input Type Barang</a></li>
+          <li><a class="shadow-xl text-white border mt-2">Input Vendor</a></li>
+          <li><a class="shadow-xl text-white border mt-2">Input Service Center</a></li>
+        </ul>
+      </button>
+      <button class="btn btn-primary size-17">Barang Masuk</button>
+      <button class="btn btn-primary size-17">Ceck Out Service</button>
+      <button class="btn btn-primary size-17">Ceck In Service</button>
+    </nav>
+  </header>
+
+
+
+  <main>
+    <dialog id="input_konsumen" class="modal">
+      <div class="modal-box">
+        <h3 class="text-lg font-bold">Hello!</h3>
+        <p class="py-4">Press ESC key or click outside to close</p>
+      </div>
+      <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+      </form>
+    </dialog>
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</body>
+</html>

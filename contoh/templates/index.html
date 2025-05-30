@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input</title>
+</head>
+<body>
+  <form id="dataform">
+    <input type="text" name="nama" id="nama" placeholder="nama">
+    <input type="email" name="email" id="email" placeholder="email">
+    <button type="submit">Submit</button>
+  </form>
+
+  <div class="data-tampil">
+    <table border="1">
+        <thead>
+          <tr>
+            <th>Nama</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for user in users %}
+          <tr>
+            <td>{{ user['nama'] }}</td>
+            <td>{{ user['email'] }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+  </div>
+
+  <script>
+    const form = document.getElementById("dataform")
+    form.addEventListener('submit', (e) => {
+      e.preventDefault()
+      const name = document.getElementById('nama').value
+      const email = document.getElementById('email').value
+      
+      fetch("/input", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({name, email})
+      })
+      .then(res => res.json())
+      .then(data => {
+        alert(`Response: ${JSON.stringify(data)}`)
+      })
+      .catch(err => console.error(err))
+    })
+  </script>
+</body>
+</html>
