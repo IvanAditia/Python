@@ -1,3 +1,3 @@
 API_KEY = 'pVf3GaE2Dpp8yVceuaAzWKYXWQ9ayNckjgigrVTJuxSmoj1GEDwSpJHpKadyGVWS'
-
 SECRET_KEY = 'mM202ONYUkUTROvd6ZeDvvwdxjLNa2SmCKFnV0jsvfLfAcEJxVBbaH4FQ4oBVWju'
+PATH = '../Crypto/data/WLDUSDT_m1.xlsx'

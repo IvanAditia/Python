@@ -38,4 +38,4 @@ def download():
 
     df.to_excel('../crypto/data/WLDUSDT_m1.xlsx')
 
-    return
+    return df
