@@ -14,16 +14,6 @@ def candle(df):
 
     df['bear_candle'] = df['close'] < df['open']
 
-    df['bull_1'] = df['close'].shift(-1) > df['close'].shift(-1)
+    df['long_candle'] = (df['candle'] <= 0.00150) & (df['candle'] >= 0.00140)
 
-    df['bear_1'] = df['close'].shift(-1) < df['close'].shift(-1)
-
-    df['bull_2'] = df['close'].shift(-2) > df['close'].shift(-2)
-
-    df['bear_2'] = df['close'].shift(-2) < df['close'].shift(-2)
-
-    df['long_candle'] = [
-        (df['candle'] <= 0.00150) &
-        (df['candle'] >= 0.00140)
-    ]
     return df

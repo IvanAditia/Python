@@ -10,4 +10,7 @@ def indicator(df):
         window=14
     ).adx()
 
-    return 
+    print(df.tail())
+
+
+    return df

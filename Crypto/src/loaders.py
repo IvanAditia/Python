@@ -8,5 +8,4 @@ def loader():
 
     df = cleaner(df)
 
-    
     return df
